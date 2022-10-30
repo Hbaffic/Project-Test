@@ -1460,7 +1460,7 @@ EditorAssetLibrary::EditorAssetLibrary(bool p_templates_only) {
 
 	support = memnew(MenuButton);
 	search_hb2->add_child(support);
-	support->set_text(TTR("Support"));
+	support->set_text(TTR("Server"));
 	support->get_popup()->set_hide_on_checkable_item_selection(false);
 	support->get_popup()->add_check_item(TTR("Official"), SUPPORT_OFFICIAL);
 	support->get_popup()->add_check_item(TTR("Community"), SUPPORT_COMMUNITY);
