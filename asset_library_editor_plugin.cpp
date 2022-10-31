@@ -635,7 +635,8 @@ void EditorAssetLibrary::_notification(int p_what) {
 
 void EditorAssetLibrary::_update_repository_options() {
 	Dictionary default_urls;
-	default_urls["godotengine.org (Official)"] = "https://godotengine.org/asset-library/api";
+	default_urls["godotengine.org"] = "https://godotengine.org/asset-library/api";
+	default_urls["localhost"] = "http://127.0.0.1/asset-library/api";
 	Dictionary available_urls = _EDITOR_DEF("asset_library/available_urls", default_urls, true);
 	repository->clear();
 	Array keys = available_urls.keys();
@@ -1460,7 +1461,7 @@ EditorAssetLibrary::EditorAssetLibrary(bool p_templates_only) {
 
 	support = memnew(MenuButton);
 	search_hb2->add_child(support);
-	support->set_text(TTR("Support"));
+	support->set_text(TTR("Channel"));
 	support->get_popup()->set_hide_on_checkable_item_selection(false);
 	support->get_popup()->add_check_item(TTR("Official"), SUPPORT_OFFICIAL);
 	support->get_popup()->add_check_item(TTR("Community"), SUPPORT_COMMUNITY);
