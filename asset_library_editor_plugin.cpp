@@ -332,20 +332,20 @@ void EditorAssetLibraryItemDownload::_http_download_completed(int p_status, int 
 		case HTTPRequest::RESULT_CONNECTION_ERROR:
 		case HTTPRequest::RESULT_BODY_SIZE_LIMIT_EXCEEDED: {
 			error_text = TTR("Connection error, please try again.");
-			status->set_text(TTR("Can't connect."));
+			status->set_text(TTR("Cannot connect."));
 		} break;
 		case HTTPRequest::RESULT_CANT_CONNECT:
 		case HTTPRequest::RESULT_SSL_HANDSHAKE_ERROR: {
-			error_text = TTR("Can't connect to host:") + " " + host;
-			status->set_text(TTR("Can't connect."));
+			error_text = TTR("Cannot connect to host:") + " " + host;
+			status->set_text(TTR("Cannot connect."));
 		} break;
 		case HTTPRequest::RESULT_NO_RESPONSE: {
 			error_text = TTR("No response from host:") + " " + host;
 			status->set_text(TTR("No response."));
 		} break;
 		case HTTPRequest::RESULT_CANT_RESOLVE: {
-			error_text = TTR("Can't resolve hostname:") + " " + host;
-			status->set_text(TTR("Can't resolve."));
+			error_text = TTR("Cannot resolve hostname:") + " " + host;
+			status->set_text(TTR("Cannot resolve."));
 		} break;
 		case HTTPRequest::RESULT_REQUEST_FAILED: {
 			error_text = TTR("Request failed, return code:") + " " + itos(p_code);
